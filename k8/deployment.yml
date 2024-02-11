@@ -10,7 +10,7 @@ spec:
       app: pharma-v3
   template:
     metadata:
-      labels:
+        labels:
         app: pharma-v3
     spec:
       containers:
