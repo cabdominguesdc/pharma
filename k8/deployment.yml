@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pharma-v3-deploy
+  name: pharma-ui
 spec:
   replicas: 1
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: pharma-v3
+      app: pharma-ui
   template:
     metadata:
       labels:
-        app: pharma-v3
+        app: pharma-ui
     spec:
       containers:
-        - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
-        name: pharma-container
+      -  image: docker-registry.dev.datacolab.pt/pharma:v3
+        name: pharma-ui
         ports:
         - containerPort: 80
