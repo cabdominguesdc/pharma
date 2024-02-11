@@ -14,7 +14,7 @@ spec:
         app: pharma-v3
     spec:
       containers:
-        - image: docker-registry.dev.datacolab.pt/pharma:v3
+        - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
         name: pharma-container
         ports:
-        - containerPort: 8080
+        - containerPort: 80
