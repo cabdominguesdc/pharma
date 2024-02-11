@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pharma-v3
+  name: pharma-v3-deploy
 spec:
   replicas: 1
   revisionHistoryLimit: 3
@@ -10,11 +10,11 @@ spec:
       app: pharma-v3
   template:
     metadata:
-        labels:
+      labels:
         app: pharma-v3
     spec:
       containers:
         - image: docker-registry.dev.datacolab.pt/pharma:v3
-        name: pharma
+        name: pharma-container
         ports:
-        - containerPort: 80
+        - containerPort: 8080
