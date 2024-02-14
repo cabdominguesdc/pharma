@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: pharma-v3
+  name: pharma-ui
 spec:
   ports:
   - port: 80
     targetPort: 80
   selector:
-    app: pharma-v3
+    app: pharma-ui
