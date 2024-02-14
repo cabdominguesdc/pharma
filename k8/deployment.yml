@@ -1,7 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  labels:
+    app.kubernetes.io/instance: pharma
   name: pharma-ui
+  namespace: pharma
 spec:
   replicas: 2
   revisionHistoryLimit: 3
@@ -14,7 +17,7 @@ spec:
         app: pharma-ui
     spec:
       containers:
-      -  name: pharma-ui
+      - name: pharma-ui
       image: docker-registry.dev.datacolab.pt/pharma_j:latest
       ports:
       - containerPort: 80
