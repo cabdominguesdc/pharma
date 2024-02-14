@@ -14,7 +14,7 @@ spec:
         app: pharma-ui
     spec:
       containers:
-      -  image: docker-registry.dev.datacolab.pt/pharma_j:latest
-        name: pharma-ui
-        ports:
-        - containerPort: 80
+      -  name: pharma-ui
+      image: docker-registry.dev.datacolab.pt/pharma_j:latest
+      ports:
+      - containerPort: 80
