@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: pharma-ui
-        image: docker-registry.dev.datacolab.pt/pharma_j:latest
+        image: docker-registry.dev.datacolab.pt/pharma:v3
         ports:
         - containerPort: 80
       imagePullSecrets:
