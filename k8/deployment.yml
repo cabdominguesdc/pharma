@@ -4,7 +4,7 @@ metadata:
   name: pharma-deployment
   namespace: pharma
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: pharma-ui
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: pharma-ui
-        image: docker-registry.dev.datacolab.pt/pharma:v3
+        image: docker-registry.dev.datacolab.pt/pharma:v4
         ports:
         - containerPort: 80
       imagePullSecrets:
